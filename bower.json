@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "description": "my awesome portfolio",
+  "main": "index.html",
+  "keywords": [
+    "sabri",
+    "webDeveloper",
+    "portfolio"
+  ],
+  "authors": [
+    "sabriRh"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "aos": "^2.1.1"
+  }
+}
