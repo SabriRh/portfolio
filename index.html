@@ -1,68 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>SabriRh</title>
-	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Nunito" rel="stylesheet">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
-	<link rel="stylesheet" type="text/css" href="libs/jquery.fullPage.css" />
-	 <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
-	 <link rel="stylesheet" href="bower_components/hover/css/hover.css" />
-	<link rel="stylesheet" type="text/css" href="style/common.css" />
-	<link rel="stylesheet" type="text/css" href="style/style.css" />
-
-
+    <title>SabriRh Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="./build/css/all.css" />
 </head>
 
 <body class="primary">
-
-<ul id="myMenu">
-    <li data-menuanchor="home" class="active hvr-bounce-to-top button"><a href="#home" class="light">Home</a></li>
-    <li data-menuanchor="technologies" class="hvr-bounce-to-top button"><a href="#technologies" class="light">Technologies</a></li>
-    <li data-menuanchor="projects" class="hvr-bounce-to-top button"><a href="#projects" class="light">Projects</a></li>
-    <li data-menuanchor="about" class="hvr-bounce-to-top button"><a href="#about" class="light">About</a></li>
-    <li data-menuanchor="contact" class="hvr-bounce-to-top button"><a href="#contact" class="light">Contact</a></li>
-</ul>
-
-<div id="fullpage">
-    <div class="section home secondary">Hello, I'am Sabri.</div>
-    <div class="section technologies secondary">I love Technologies !</div>
-    <div class="section projects secondary">
-	    <div class="slide accent" data-anchor="slide1"> Project 1 </div>
-	    <div class="slide accent" data-anchor="slide2"> Project 2 </div>
-	    <div class="slide accent" data-anchor="slide3"> Project 3 </div>
-	    <div class="slide accent" data-anchor="slide4"> Project 4 </div>
+    <div class="menu-container container">
+        <ul id="myMenu" class="row">
+            <!-- add class hvr-bounce-to-top for hover effect
+ -->
+            <li data-menuanchor="home" class="active button"><a href="#home" class="light">Home</a></li>
+            <li data-menuanchor="technologies" class=" button"><a href="#technologies" class="light">Technologies</a></li>
+            <li data-menuanchor="projects" class=" button"><a href="#projects" class="light">Projects</a></li>
+            <li data-menuanchor="about" class=" button"><a href="#about" class="light">About</a></li>
+            <li data-menuanchor="contact" class=" button"><a href="#contact" class="light">Contact</a></li>
+        </ul>
     </div>
-    <div class="section about secondary">I Love / I Hate</div>
-    <div class="section contact secondary">Contact Me</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-<!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
-<script src="libs/jquery.easings.min.js"></script>
-
-
-<!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
-<script type="text/javascript" src="libs/scrolloverflow.min.js"></script>
-
-<script type="text/javascript" src="libs/jquery.fullPage.js"></script>
-
- <!-- <script src="bower_components/aos/dist/aos.js"></script> -->
-
-<script type="text/javascript" src="js/myScript.js"></script>
-
+    <div id="fullpage">
+        <div class="section home secondary">Hello, I'am Sabri.</div>
+        <div class="section technologies secondary">I love Technologies !</div>
+        <div class="section projects secondary">
+            <div class="slide accent" data-anchor="slide1"> Project 1 </div>
+            <div class="slide accent" data-anchor="slide2"> Project 2 </div>
+            <div class="slide accent" data-anchor="slide3"> Project 3 </div>
+            <div class="slide accent" data-anchor="slide4"> Project 4 </div>
+        </div>
+        <div class="section about secondary">I Love / I Hate</div>
+        <div class="section contact secondary">Contact Me</div>
+    </div>
+    <script type="text/javascript" src="./build/js/all.js"></script>
 </body>
+
 </html>

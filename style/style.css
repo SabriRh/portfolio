@@ -1,37 +1,69 @@
-body *{
-font-family: 'Abril Fatface', cursive;
+body * {
+    font-family: pathwayGothic;
+}
+
+.box {
+    width: 100px;
+    border: 1px solid black;
+    position: relative;
 }
 
 
-.box{
-	width: 100px;
-	border: 1px solid black;
-	position: relative;
+/* .button {
+    border: none;
+    margin: 0;
+    width: 10%;
+    height: 30px;
+}
+ */
+
+.menu-container {
+    width: 100%;
 }
 
-.button{
-	border: none;
-	margin: 0;
-	width: 10%;
-	height: 30px;
-}
-
-#myMenu{
+#myMenu {
     position: fixed;
-    top: 0;
-    left: 0;
     height: 40px;
     z-index: 70;
     width: 100%;
     list-style: none;
-    display: inline-flex;
+    display: flex;
+    text-align: center;
+    margin: 0 25%;
+    padding: 0;
 }
 
-#myMenu li{
-	padding: 10px;
-	text-align: center;
+#myMenu li {
+    padding: 10px;
+    text-align: center;
+    width: 10%;
 }
 
-#myMenu li.active a{
-	color: #d9d9d9;
+#myMenu li a {
+    color: white;
+}
+
+#myMenu li.active a {
+    color: #DE1B1B;
+}
+
+
+/*responsive menu*/
+
+.slicknav_menu {
+    display: none;
+}
+
+@media screen and (max-width: 780px) {
+    /* #myMenu is the original menu */
+    #myMenu {
+        display: none;
+    }
+    .slicknav_menu {
+        display: block;
+        position: fixed;
+        z-index: 100;
+        left: 0;
+        right: 0;
+    }
 }

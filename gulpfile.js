@@ -12,26 +12,29 @@ var argv = require('yargs').argv;
 var uglifycss = require('gulp-uglifycss');
 var concatCss = require('gulp-concat-css');
 var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
 var removeLogs = require('gulp-removelogs');
 var stripDebug = require('gulp-strip-debug');
 
 var paths = {
     scripts: [
         //bower components
-        "bower_components/angular/angular.js",
-        "bower_components/jquery/dist/jquery.js",
-        "js/porfolio.js"
+        "./bower_components/jquery/dist/jquery.js",
+        "./bower_components/fullpage.js/vendors/jquery.easing.min.js",
+        "./bower_components/fullpage.js/vendors/scrolloverflow.min.js",
+        "./bower_components/fullpage.js/dist/jquery.fullpage.min.js",
+        "./bower_components/slicknav/dist/jquery.slicknav.min.js",
+        "./js/myScript.js"
 
     ],
     images: 'img/**',
     css: [
-        //bower components
+        "bower_components/components-font-awesome/css/font-awesome.css",
+        "bower_components/bootstrap/dist/css/bootstrap.css",
+        "bower_components/fullpage.js/jquery.fullPage.css",
+        "bower_components/slicknav/dist/slicknav.min.css",
         "style/common.css",
-        //scss file
-        'style/generated/style.css',
+        "style/style.css",
     ],
-    sassFiles: ['sass/*.scss'],
     fonts: ['fonts/*.*'],
     jsDestination: "build/js",
     cssDestination: "build/css",
@@ -50,21 +53,16 @@ gulp.task('clean', function() {
 });
 
 
-gulp.task('sass', function() {
-    return gulp.src(paths.sassFiles)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(paths.cssDestination));
-});
 
 
-gulp.task('css', ['sass'], function() {
+gulp.task('css', function() {
     return gulp.src(paths.css)
         .pipe(concatCss("all.css"))
         .pipe(gulp.dest(paths.cssDestination))
         .pipe(browserSync.stream());
 });
 
-gulp.task('cssUgly', ['sass'], function() {
+gulp.task('cssUgly', function() {
     return gulp.src(paths.css)
         .pipe(concatCss("all.min.css"))
         .pipe(uglifycss())
@@ -119,14 +117,14 @@ gulp.task('watchDev', function() {
     gulp.watch(paths.scripts, ['concat']);
     gulp.watch(paths.css, ['css']);
     gulp.watch(paths.images, ['images']);
-    gulp.watch(paths.sassFiles, ['css', 'cssUgly']);
+
 });
 
 // Rerun the task when a file changes
 gulp.task('watchPreprod', function() {
     gulp.watch(paths.scripts, ['minify']);
     gulp.watch(paths.css, ['cssUgly']);
-    gulp.watch(paths.sassFiles, ['css', 'cssUgly']);
+
 });
 
 gulp.task('removeLog', function() {
@@ -140,7 +138,7 @@ gulp.task('watchProd', function() {
     gulp.watch(paths.scripts, ['obfuscate']);
     gulp.watch(paths.css, ['cssUgly']);
     gulp.watch(paths.images, ['images']);
-    gulp.watch(paths.sassFiles, ['css', 'cssUgly']);
+
 });
 
 // Rerun the task when a file changes
@@ -148,7 +146,7 @@ gulp.task('watchAll', function() {
     gulp.watch(paths.scripts, ['concat', 'minify', 'obfuscate']);
     gulp.watch(paths.css, ['css', 'cssUgly']);
     gulp.watch(paths.images, ['images']);
-    gulp.watch(paths.sassFiles, ['css', 'cssUgly']);
+
 });
 
 var tasks, paramsForReloading;
@@ -178,7 +176,7 @@ gulp.task('serve', tasks, function() {
     });
 
     //watch index file
-    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch("index.html").on('change', browserSync.reload);
 
 });
 

@@ -1,9 +1,9 @@
 $(document).ready(function() {
-    $('#fullpage').fullpage({
+    jQuery('#fullpage').fullpage({
         //Navigation
         menu: '#myMenu',
         lockAnchors: false,
-        anchors:['home', 'technologies','projects', 'about', 'contact'],
+        anchors: ['home', 'technologies', 'projects', 'about', 'contact'],
         navigation: false,
         navigationPosition: 'right',
         navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -30,7 +30,7 @@ $(document).ready(function() {
         resetSliders: false,
         fadingEffect: false,
         normalScrollElements: '#element1, .element2',
-        scrollOverflow: false,
+        scrollOverflow: true,
         scrollOverflowOptions: null,
         touchSensitivity: 15,
         normalScrollElementTouchThreshold: 5,
@@ -44,7 +44,7 @@ $(document).ready(function() {
         //Design
         controlArrows: false,
         verticalCentered: true,
-        sectionsColor : ['#0d0d0d', '#73192a' , '#0d0d0d' , '#0d0d0d','#d92b2b'],
+        sectionsColor: ['#2B2B2B', '#CCC', '#F6F6F6', '#E9E581', '#EEE'],
         paddingTop: '3em',
         paddingBottom: '10px',
         fixedElements: '#header, .footer',
@@ -57,16 +57,23 @@ $(document).ready(function() {
         slideSelector: '.slide',
 
         //events
-        onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
-        afterRender: function(){},
-        afterResize: function(){},
-        afterResponsive: function(isResponsive){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        onLeave: function(index, nextIndex, direction) {},
+        afterLoad: function(anchorLink, index) {},
+        afterRender: function() {},
+        afterResize: function() {},
+        afterResponsive: function(isResponsive) {},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {},
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {}
     });
 
 
-    /*AOS.init();*/
+
+
+    $(function() {
+        $('#myMenu').slicknav({
+            'label': '',
+            'brand': 'SabriRh'
+        });
+    });
 
 });
