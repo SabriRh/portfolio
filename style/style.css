@@ -54,7 +54,7 @@ body * {
     display: none;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-device-width: 780px) {
     /* #myMenu is the original menu */
     #myMenu {
         display: none;

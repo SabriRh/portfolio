@@ -19,11 +19,13 @@ var paths = {
     scripts: [
         //bower components
         "./bower_components/jquery/dist/jquery.js",
+        "./bower_components/angular/angular.js",
         "./bower_components/fullpage.js/vendors/jquery.easing.min.js",
         "./bower_components/fullpage.js/vendors/scrolloverflow.min.js",
         "./bower_components/fullpage.js/dist/jquery.fullpage.min.js",
         "./bower_components/slicknav/dist/jquery.slicknav.min.js",
-        "./js/myScript.js"
+        "./js/myScript.js",
+        "./js/portfolio.js"
 
     ],
     images: 'img/**',
