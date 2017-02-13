@@ -1,0 +1,39 @@
+[
+
+
+    {
+        "name": "DigitTab",
+        "description": "lorem ipsum dsb d ssj  cdsv fdbrb",
+        "slider": [{
+            "image": "image_projet11.jpg",
+            "text": "description projet 1 , slider 1"
+        }, {
+            "image": "image_projet12.jpg",
+            "text": "description projet 1 , slider 2"
+        }, {
+            "image": "image_projet13.jpg",
+            "text": "description projet 1 , slider 3"
+        }, {
+            "image": "image_projet14.jpg",
+            "text": "description projet 1 , slider 4"
+        }],
+    }, {
+        "name": "Gembox",
+        "description": " ipsum dsb d ssj lom ipfdm dsb duj ssj  cdsv fdbrb",
+        "slider": [{
+            "image": "image_projet21.jpg",
+            "text": "description projet 2 , slider 1"
+        }, {
+            "image": "image_projet22.jpg",
+            "text": "description projet 2 , slider 2"
+        }, {
+            "image": "image_projet23.jpg",
+            "text": "description projet 2 , slider 3"
+        }, {
+            "image": "image_projet24.jpg",
+            "text": "description projet 2 , slider 4"
+        }],
+    }
+
+
+]

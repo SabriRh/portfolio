@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+    //full page config
     jQuery('#fullpage').fullpage({
         //Navigation
         menu: '#myMenu',
@@ -28,7 +30,7 @@ $(document).ready(function() {
         scrollHorizontally: false,
         interlockedSlides: false,
         resetSliders: false,
-        fadingEffect: false,
+        fadingEffect: true,
         normalScrollElements: '#element1, .element2',
         scrollOverflow: true,
         scrollOverflowOptions: null,
@@ -68,12 +70,63 @@ $(document).ready(function() {
 
 
 
-
+    //slick nav config
     $(function() {
         $('#myMenu').slicknav({
             'label': '',
-            'brand': 'SabriRh'
+            'brand': 'SabriRh',
+            'closeOnClick': true,
+            'animations': 'jquery',
+            'easingOpen': 'swing', // Easing used for open animations.
+            'easingClose': 'swing' // Easing used for close animations.
         });
     });
+
+    $('.section').on('click', function() {
+        $('#myMenu').slicknav('close');
+    });
+
+
+    //segmenter config
+    (function() {
+        var headline = document.querySelector('.trigger-headline'),
+            segmenter = new Segmenter(document.querySelector('.segmenter'), {
+                pieces: 10,
+                shadowsAnimation: {
+                    opacity: 1,
+                    translateX: 20,
+                    translateY: 20
+                },
+                animation: {
+                    duration: 1500,
+                    easing: 'easeOutQuad',
+                    delay: 50,
+                    translateZ: { min: 10, max: 65 }
+                },
+                positions: [
+                    { top: 0, left: 0, width: 30, height: 30 },
+                    { top: 10, left: 10, width: 30, height: 30 },
+                    { top: 20, left: 20, width: 30, height: 30 },
+                    { top: 30, left: 30, width: 30, height: 30 },
+                    { top: 40, left: 40, width: 30, height: 30 },
+                    { top: 50, left: 50, width: 30, height: 30 },
+                    { top: 60, left: 60, width: 30, height: 30 },
+                    { top: 70, left: 70, width: 30, height: 30 },
+                    { top: 80, left: 80, width: 30, height: 30 },
+                    { top: 90, left: 90, width: 30, height: 30 }
+                ],
+                onReady: function() {
+
+
+
+                    setTimeout(function() {
+                        segmenter.animate();
+                        headline.classList.remove('trigger-headline--hidden');
+                    }, 1000);
+
+                }
+            });
+    })();
+
 
 });

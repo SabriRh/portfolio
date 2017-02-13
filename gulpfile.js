@@ -24,6 +24,9 @@ var paths = {
         "./bower_components/fullpage.js/vendors/scrolloverflow.min.js",
         "./bower_components/fullpage.js/dist/jquery.fullpage.min.js",
         "./bower_components/slicknav/dist/jquery.slicknav.min.js",
+        "./js/anime.min.js",
+        "./js/imagesloaded.pkgd.min.js",
+        "./js/main.js",
         "./js/myScript.js",
         "./js/portfolio.js"
 
@@ -35,6 +38,8 @@ var paths = {
         "bower_components/fullpage.js/jquery.fullPage.css",
         "bower_components/slicknav/dist/slicknav.min.css",
         "style/common.css",
+        "style/component.css",
+        "style/demo.css",
         "style/style.css",
     ],
     fonts: ['fonts/*.*'],

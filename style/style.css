@@ -8,14 +8,9 @@ body * {
     position: relative;
 }
 
-
-/* .button {
-    border: none;
-    margin: 0;
-    width: 10%;
-    height: 30px;
+.section {
+    padding-bottom: 0 !important;
 }
- */
 
 .menu-container {
     width: 100%;
@@ -54,7 +49,8 @@ body * {
     display: none;
 }
 
-@media screen and (max-device-width: 780px) {
+@media screen and (max-device-width: 780px),
+screen and (max-width: 780px) {
     /* #myMenu is the original menu */
     #myMenu {
         display: none;
