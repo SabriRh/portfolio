@@ -23,25 +23,25 @@ var paths = {
         "./bower_components/fullpage.js/vendors/jquery.easing.min.js",
         "./bower_components/fullpage.js/vendors/scrolloverflow.min.js",
         "./bower_components/fullpage.js/dist/jquery.fullpage.min.js",
+        "./bower_components/fullpage.js/dist/jquery.fullpage.extensions.min.js",
         "./bower_components/slicknav/dist/jquery.slicknav.min.js",
-        "./js/anime.min.js",
-        "./js/imagesloaded.pkgd.min.js",
-        "./js/main.js",
-        "./js/myScript.js",
-        "./js/portfolio.js"
-
+        "./semantic/dist/semantic.min.js",
+        "./js/*.min.js",
+        "./js/*.js"
     ],
+
     images: 'img/**',
+
     css: [
         "bower_components/components-font-awesome/css/font-awesome.css",
         "bower_components/bootstrap/dist/css/bootstrap.css",
+        "./semantic/dist/semantic.css",
         "bower_components/fullpage.js/jquery.fullPage.css",
         "bower_components/slicknav/dist/slicknav.min.css",
-        "style/common.css",
-        "style/component.css",
-        "style/demo.css",
-        "style/style.css",
+        "style/*.min.css",
+        "style/*.css",
     ],
+
     fonts: ['fonts/*.*'],
     jsDestination: "build/js",
     cssDestination: "build/css",
@@ -58,8 +58,6 @@ gulp.task('clean', function() {
     // You can use multiple globing patterns as you would with `gulp.src`
     return del([paths.buildPath]);
 });
-
-
 
 
 gulp.task('css', function() {
@@ -104,7 +102,6 @@ gulp.task('obfuscate', function() {
         .pipe(gulp.dest(paths.jsDestination))
         .pipe(browserSync.stream());
 });
-
 
 // Copy all static images
 gulp.task('images', function() {

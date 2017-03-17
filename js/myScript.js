@@ -46,7 +46,7 @@ $(document).ready(function() {
         //Design
         controlArrows: false,
         verticalCentered: true,
-        sectionsColor: ['#2B2B2B', '#CCC', '#F6F6F6', '#E9E581', '#EEE'],
+        sectionsColor: ['#2B2B2B', '#1B1A18', '#F6F6F6', '#E9E581', '#EEE'],
         paddingTop: '3em',
         paddingBottom: '10px',
         fixedElements: '#header, .footer',
@@ -68,8 +68,6 @@ $(document).ready(function() {
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {}
     });
 
-
-
     //slick nav config
     $(function() {
         $('#myMenu').slicknav({
@@ -80,40 +78,37 @@ $(document).ready(function() {
             'easingOpen': 'swing', // Easing used for open animations.
             'easingClose': 'swing' // Easing used for close animations.
         });
-    });
 
-    $('.section').on('click', function() {
-        $('#myMenu').slicknav('close');
+        $('.section').on('click', function() {
+            $('#myMenu').slicknav('close');
+        });
     });
-
 
     //segmenter config
     (function() {
         var headline = document.querySelector('.trigger-headline'),
             segmenter = new Segmenter(document.querySelector('.segmenter'), {
-                pieces: 10,
+                pieces: 7,
                 shadowsAnimation: {
-                    opacity: 1,
+                    opacity: .7,
                     translateX: 20,
                     translateY: 20
                 },
                 animation: {
                     duration: 1500,
-                    easing: 'easeOutQuad',
-                    delay: 50,
-                    translateZ: { min: 10, max: 65 }
+                    easing: 'easeInOutExpo',
+                    delay: 100,
+                    translateZ: { min: 10, max: 45 }
                 },
+                parallax: true,
                 positions: [
                     { top: 0, left: 0, width: 30, height: 30 },
-                    { top: 10, left: 10, width: 30, height: 30 },
                     { top: 20, left: 20, width: 30, height: 30 },
-                    { top: 30, left: 30, width: 30, height: 30 },
                     { top: 40, left: 40, width: 30, height: 30 },
-                    { top: 50, left: 50, width: 30, height: 30 },
-                    { top: 60, left: 60, width: 30, height: 30 },
-                    { top: 70, left: 70, width: 30, height: 30 },
+                    { top: 60, left: 60, width: 30, height: 40 },
                     { top: 80, left: 80, width: 30, height: 30 },
-                    { top: 90, left: 90, width: 30, height: 30 }
+                    { top: 100, left: 100, width: 30, height: 30 },
+                    { top: 80, left: 0, width: 20, height: 20 }
                 ],
                 onReady: function() {
 
@@ -127,6 +122,12 @@ $(document).ready(function() {
                 }
             });
     })();
+
+
+
+    //init the accordion component semantic ui
+    $('.ui.accordion').accordion();
+
 
 
 });

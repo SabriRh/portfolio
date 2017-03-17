@@ -10,6 +10,18 @@ body * {
 
 .section {
     padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+.slicknav_menu,
+.slicknav_btn {
+    background: rgba(76, 76, 76, 0.4) !important;
+}
+
+ul.slicknav_nav {
+    height: 100vh;
+    text-align: center;
+    margin: auto;
 }
 
 .menu-container {
